@@ -1,7 +1,7 @@
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.querySelector('#nav-menu'),
-      navToggle = document.querySelector('#nav-toggle')
-      navClose = document.querySelector('#nav-close')
+    navToggle = document.querySelector('#nav-toggle')
+navClose = document.querySelector('#nav-close')
 
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
@@ -32,7 +32,7 @@ navLink.forEach(n => n.addEventListener('click', linkAction));
 
 /*==================== ACCORDION SKILLS ====================*/
 const skillsContent = document.querySelectorAll('.skills__content'),
-      skillsHeader = document.querySelectorAll('.skills__header');
+    skillsHeader = document.querySelectorAll('.skills__header');
 
 function toggleSkills() {
     let itemClass = this.parentNode.className;
@@ -46,7 +46,7 @@ function toggleSkills() {
     }
 }
 
-skillsHeader.forEach( (element) => {
+skillsHeader.forEach((element) => {
     element.addEventListener('click', toggleSkills);
 });
 
@@ -55,19 +55,19 @@ const tabs = document.querySelectorAll('[data-target]'),
     tabsContents = document.querySelectorAll('[data-content]');
 
 tabs.forEach(tab => {
-   tab.addEventListener('click', () => {
-      const target = document.querySelector(tab.dataset.target);
+    tab.addEventListener('click', () => {
+        const target = document.querySelector(tab.dataset.target);
 
-      tabsContents.forEach(tabsContents => {
-         tabsContents.classList.remove('qualification__active');
-      });
-      target.classList.add('qualification__active');
+        tabsContents.forEach(tabsContents => {
+            tabsContents.classList.remove('qualification__active');
+        });
+        target.classList.add('qualification__active');
 
-      tabs.forEach(tab => {
-          tab.classList.remove('qualification__active');
-      });
-      tab.classList.add('qualification__active');
-   });
+        tabs.forEach(tab => {
+            tab.classList.remove('qualification__active');
+        });
+        tab.classList.add('qualification__active');
+    });
 });
 
 /*==================== SERVICES MODAL ====================*/
@@ -79,15 +79,15 @@ let modal = function (modalClick) {
     modalViews[modalClick].classList.add('active-modal');
 }
 
-modalButtons.forEach( (modalButton, i) => {
+modalButtons.forEach((modalButton, i) => {
     modalButton.addEventListener('click', () => {
         modal(i)
     });
 });
 
-modalCloses.forEach( (modalClose, i) => {
+modalCloses.forEach((modalClose, i) => {
     modalClose.addEventListener('click', () => {
-        modalViews.forEach( modalView => {
+        modalViews.forEach(modalView => {
             modalView.classList.remove('active-modal');
         })
     });
@@ -111,13 +111,13 @@ let swiperTestimonial = new Swiper('.testimonial__container', {
     loop: true,
     grabCursor: true,
     spaceBetween: 48,
-    
+
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
         dynamicBullets: true
     },
-    
+
     breakpoints: {
         568: {
             slidesPerView: 2,
@@ -147,10 +147,28 @@ function scrollActive() {
 
 window.addEventListener('scroll', scrollActive)
 
-/*==================== CHANGE BACKGROUND HEADER ====================*/ 
+/*==================== CHANGE BACKGROUND HEADER ====================*/
+function scrollHeader() {
+    const nav = document.querySelector('#header');
 
+    if (this.scrollY >= 80)
+        nav.classList.add('scroll-header');
+    else
+        nav.classList.remove('scroll-header');
+}
 
-/*==================== SHOW SCROLL UP ====================*/ 
+window.addEventListener('scroll', scrollHeader);
 
+/*==================== SHOW SCROLL UP ====================*/
+function scrollUp() {
+    const scrollUp = document.querySelector('#scroll-up');
+
+    if(this.scrollY >= 560)
+        scrollUp.classList.add('show-scroll');
+    else
+        scrollUp.classList.remove('show-scroll');
+}
+
+window.addEventListener('scroll', scrollUp);
 
 /*==================== DARK LIGHT THEME ====================*/ 
