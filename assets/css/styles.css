@@ -8,7 +8,7 @@
 
     /*========== Colors ==========*/
     /* Change favorite color */
-    --hue-color: 250;
+    --hue-color: 215;
     /*Purple 250 - Green 142 - Blue 230 - Pink 340*/
 
     /* HSL color mode */
@@ -1207,7 +1207,7 @@ img {
         padding-top: 5.5rem;
         column-gap: 2rem;
     }
-    
+
     .home__blob {
         width: 270px;
     }
@@ -1304,7 +1304,7 @@ img {
     .footer__bg {
         padding: 3rem 0 3.5rem;
     }
-    
+
     .footer__links {
         flex-direction: row;
         column-gap: 2rem;
@@ -1316,5 +1316,55 @@ img {
 
     .footer__copy {
         margin-top: 4.5rem;
+    }
+}
+
+/* Devices with huge screens */
+@media screen and (min-width: 1024px) {
+    .header,
+    .main, 
+    .footer__container {
+        padding: 0;
+    }
+
+    .container {
+        margin-left: 10rem;
+        margin-right: 6rem;
+    }
+
+    .home__blob {
+        width: 320px;
+    }
+
+    .home__social {
+        transform: translateX(-6rem);
+    }
+
+    .services__container {
+        grid-template-columns: repeat(3, 238px);
+    }
+
+    .portfolio__content {
+        column-gap: 3rem;
+    }
+
+    .swiper-portfolio-icon {
+        font-size: 3.5rem;
+    }
+
+    .swiper-button-prev {
+        left: -2.5rem;
+    }
+
+    .swiper-button-next {
+        right: -2.5rem;
+    }
+
+    .swiper-container-horizontal > .swiper-pagination-bullets {
+        bottom: -4.5rem;
+    }
+
+    .contact__form {
+        width: 460px;
     }
 }
