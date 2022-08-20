@@ -517,20 +517,20 @@ img {
 }
 
 /* Skills 1 */
-.skills__html {
-    width: 90%;
+.skills__selenium {
+    width: 80%;
 }
 
-.skills__css {
-    width: 60%
+.skills__postman {
+    width: 80%
 }
 
-.skills__js {
-    width: 90%;
+.skills__test-design {
+    width: 75%;
 }
 
-.skills__react {
-    width: 20%;
+.skills__test-planning {
+    width: 70%;
 }
 
 /* Skills 2 */
@@ -542,7 +542,7 @@ img {
     width: 60%;
 }
 
-.skills__postman {
+.skills__postman1 {
     width: 90%;
 }
 
